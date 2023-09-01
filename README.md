@@ -35,15 +35,16 @@ The LLM (Language Model) Chatbot is designed to interact with users based on the
 To set up the project, follow these instructions:
 
 1. Clone the repository from [GitHub Repo Link](https://github.com/harikris001/Book-wizard).
-  ```
-  git clone https://github.com/harikris001/Book-wizard.git
-  ```
+    ```
+    git clone https://github.com/harikris001/Book-wizard.git
+    ```
 2. Install the required libraries and dependencies by running the following command:
    ```
    pip install -r requirements.txt
    ```
 
-3. [Additional Configuration Steps, if any]
+3. Go To Hugging Face [LaMini-T5-738M](https://huggingface.co/MBZUAI/LaMini-T5-738M) model and download pytorch_model.bin and paste in directory 'LaMini-T5-738M'
+4. If you have a GPU with more than 4GB or VRAM recommended to install the CUDA toolkit from Nvidia [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
 ## How to Run
 To run the LLM Chatbot, follow these steps:
@@ -53,16 +54,14 @@ To run the LLM Chatbot, follow these steps:
    ```
    cd your-project-directory
    ```
-2. Go To Hugging Face [LaMini-T5-738M](https://huggingface.co/MBZUAI/LaMini-T5-738M) model and download pytorch_model.bin and post in directory LaMini-T5-738M
-
-3. Start the application:
+2. Start the application:
    ```
    streamlit run BookSummarizer_bot.py 
    ```
 
-4. Open your web browser and access the chatbot interface.
+3. Open your web browser and access the chatbot interface.
 
-5. Upload a PDF document and start chatting with the LLM Chatbot. It will respond based on the context of the uploaded PDF.
+4. Upload a PDF document and start chatting with the LLM Chatbot. It will respond based on the context of the uploaded PDF.
 
 Enjoy seamless and context-aware conversations with the LLM Chatbot!
 
@@ -70,4 +69,4 @@ Enjoy seamless and context-aware conversations with the LLM Chatbot!
 
 Feel free to reach out to our team members if you have any questions or need assistance with the project.
 
-**Disclaimer:** This project is based on a language model, and its performance may vary depending on the complexity and quality of the PDF content provided.
+**Disclaimer:** This project is based on a language model, and its performance may vary depending on the complexity and quality of the PDF content provided, performance of the computer etc.
