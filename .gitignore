@@ -1,0 +1,5 @@
+# Custom virtual environment
+/got
+
+# Location to store model
+/LaMini-T5-738M/pytorch_model.bin
