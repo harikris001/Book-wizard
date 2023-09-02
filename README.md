@@ -8,8 +8,13 @@
 1. [Harikrishna R Nair](https://github.com/harikris001)
 2. [Alisha Alappat](https://github.com/alishaalappat)
 
-## Link to Product Walkthrough
-[Watch Demo Video](Link Here)
+## Video to Product Walkthrough
+
+
+
+https://github.com/harikris001/Book-wizard/assets/85405666/3caf105f-bda6-4e4a-8948-89db4daf4231
+
+
 
 ## How it Works
 The LLM (Language Model) Chatbot is designed to interact with users based on the context provided by a PDF document. Here's how it works:
@@ -52,7 +57,7 @@ To run the LLM Chatbot, follow these steps:
 1. Navigate to the project directory:
 
    ```
-   cd your-project-directory
+   cd Book-wizard
    ```
 2. Start the application:
    ```
