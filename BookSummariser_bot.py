@@ -20,7 +20,7 @@ st.set_page_config(layout="wide",page_title="`BookSummariser Bot")
 device = torch.device('cpu')
 
 checkpoint = "LaMini-T5-738M"
-print(f"Checkpoint path: {checkpoint}")  # Add this line for debugging
+# print(f"Checkpoint path: {checkpoint}")
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 base_model = AutoModelForSeq2SeqLM.from_pretrained(
     checkpoint,
@@ -38,7 +38,7 @@ def data_ingestion():
                 print(file)
                 loader = PDFMinerLoader(os.path.join(root, file))
     documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=100)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
     texts = text_splitter.split_documents(documents)
     #create embeddings here
     embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
@@ -111,12 +111,12 @@ def display_conversation(history):
 
 def main():
     st.markdown("<h1 style='text-align: center; color: blue;'>Book Wizard - AI Book Summarizer 📖 </h1>", unsafe_allow_html=True)
-    st.markdown("<h5 style='text-align: left; color: white;'>Your personal Book summarizer, like a librarian 😌</h5>",unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center; color: grey;'>Built by <a href='https://github.com/harikris001'>Harikrishna</a></h3>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: left; color: white;'>Your personal Book summarizer, like a librarian 😌, Upload any Documents even multiple documets, I can explain everything for you. Be it articles, bank statments, profit charts, even Novels</h5>",unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: grey;'>Built by <a href='https://github.com/harikris001/Book-wizard'>Harikrishna & Alisha</a></h3>", unsafe_allow_html=True)
 
     st.markdown("<h4 style='text-align: center; color:red;'>Upload your PDF 👇</h4>", unsafe_allow_html=True)
 
-    uploaded_file = st.file_uploader("", type=["pdf"])
+    uploaded_file = st.file_uploader(" ", type=["pdf"])
 
     if uploaded_file is not None:
         file_details = {

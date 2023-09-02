@@ -15,7 +15,7 @@ def main():
                 loader = PyPDFLoader(os.path.join(root, file))
     documents = loader.load()
     print("splitting into chunks")
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=100)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
     texts = text_splitter.split_documents(documents)
     #create embeddings here
     print("Loading sentence transformers model")
